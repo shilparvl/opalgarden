@@ -1,0 +1,57 @@
+<?php
+use Drupal\Core\Database\Database;
+
+/*
+ * Implement hook_schema().
+ */
+function flower_schema(){
+    $spec = [
+        'fields' => [
+        'fid' => [
+            'name' => 'Flower Id',
+            'type' => 'serial',
+            'description' => 'Flower Id',
+            'not null' => true,
+        ],
+        'name' => [
+            'name' => 'Flower Name',
+            'type' => 'varchar',
+            'length' => 250,
+            'description' => 'Flower name',
+        ],
+        'description' => [
+            'name' => 'Flower description',
+            'type' => 'text',
+            'description' => 'Flower description',
+        ],
+        'color' => [
+            'name' => 'color',
+            'type' => 'varchar',
+            'length' => 30,
+            'description' => 'Flower color',
+        ],
+        'price' => [
+            'name' => 'Flower Price',
+            'type' => 'int',
+            'description' => 'Flower Price',
+        ],
+        'image' => [
+            'name' => 'Flower Image',
+            'type' => 'varchar',
+            'length' => 100,
+            'description' => 'Flower Image',
+        ],
+    ],
+    'primary key' => ['fid'],
+    'indexes' => [
+        'fidx' => ['fid'],
+        'namex' => ['name'],
+        'pricex' => ['price'],
+    ],
+    ];
+    
+    $conn = Database::getConnection()->schema();
+    $tablename = $conn->tablePrefix(). 'flower';
+    $conn->createTable($tablename, $spec);
+}
+

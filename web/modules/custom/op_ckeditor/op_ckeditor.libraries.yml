@@ -1,0 +1,8 @@
+op_ckeditor:
+  js:
+    js/op_ckeditor.js: {}
+  css:
+    theme:
+      css/op_ckeditor.css: {}
+  dependencies:
+    - ckeditor/ckeditor

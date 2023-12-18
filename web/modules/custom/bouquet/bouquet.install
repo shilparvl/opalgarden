@@ -1,0 +1,51 @@
+<?php
+
+use \Drupal\Core\Database\Database;
+
+function bouquet_schema(){
+    $bouquet = [
+        'fields' => [
+            'bid' => [
+                'type' => 'serial',
+                'title' => 'Bouquet Id',
+                'not null' => TRUE,
+            ],
+            'name' => [
+                'type' => 'text',
+                'title' => 'Bouquet Name',
+                'description' => 'Bouquet Name',
+            ],
+            'price' => [
+                'type' => 'int',
+                'title' => 'Price',
+                'description' => 'Price',
+            ],
+        ],
+        'primary key' => ['bid'],
+    ];
+
+    $flowerbouquet = [
+        'fields' => [
+            'bfid' => [
+                'type' => 'serial',
+                'title' => 'Bouquet Flower Id',
+                'not null' => TRUE,
+            ],
+            'bid' => [
+                'type' => 'int',
+                'title' => 'Bouquet Id',
+                'description' => 'Bouquet Id',
+            ],
+            'fid' => [
+                'type' => 'int',
+                'title' => 'Flower Id',
+                'description' => 'Flower Id',
+            ],
+        ],
+        'primary key' => ['bfid'],
+    ];
+
+    $schema = Database::getConnection()->schema();
+    $schema->createTable('bouquet', $bouquet);
+    $schema->createTable('flowerbouquet', $flowerbouquet);
+}

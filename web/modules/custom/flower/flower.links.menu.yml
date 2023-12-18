@@ -1,0 +1,5 @@
+flower.flowersrout:
+  route_name: flower.flowersrout
+  title: Flower title in menu yml file
+  parent: system.admin_structure
+  description: 'Flower module'

@@ -1,0 +1,24 @@
+version: '3'
+
+services:
+  mysql:
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+
+  drupal:
+    image: drupal:latest
+    ports:
+      - "8080:80"
+    volumes:
+      - ./web:/var/www/html
+    depends_on:
+      - mysql
+    environment:
+      - DRUPAL_DATABASE_HOST=mysql
+      - DRUPAL_DATABASE_PORT=3306
+      - DRUPAL_DATABASE_NAME=drupal
+      - DRUPAL_DATABASE_USER=root
+      - DRUPAL_DATABASE_PASSWORD=root
+
+    command: ["apache2-foreground"]

@@ -1,0 +1,8 @@
+services:
+  flower.flower_service:
+    class: Drupal\flower\Services\FlowerService
+    arguments: ['@database']
+  flower.flower_form:
+    class: Drupal\flower\Form\FlowerForm
+    arguments: ['@flower.flower_service', '@messenger']
+    

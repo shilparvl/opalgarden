@@ -1,0 +1,14 @@
+bouquet.bouquetrout:
+  title: Add
+  route_name: bouquet.bouquetrout
+  base_route: bouquet.bouquetrout
+
+bouquet.bouquet_view:
+  title: View
+  route_name: bouquet.bouquet_view
+  base_route: bouquet.bouquetrout
+
+bouquet.bouquet_delete:
+  title: Delete
+  route_name: bouquet.bouquet_delete
+  base_route: bouquet.bouquetrout

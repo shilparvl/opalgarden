@@ -1,0 +1,5 @@
+bouquet.bouquetrout:
+  route_name: bouquet.bouquetrout
+  title: Bouquet title in menu yml file
+  parent: system.admin_structure
+  description: 'Description of link goes here.'

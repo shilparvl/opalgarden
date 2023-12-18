@@ -1,0 +1,28 @@
+bouquet.bouquetrout:
+  path: '/bouquet/{bid}'
+  defaults: 
+    _form: '\Drupal\bouquet\Form\BouquetForm'
+    _title: 'Bouquet Form'
+    bid: ''
+  requirements:
+    _permission: 'add bouquet'
+  # options:
+  #   _admin_route: TRUE
+
+bouquet.bouquet_view:
+  path: '/bouquet/view/{bid}'
+  defaults: 
+    _form: '\Drupal\bouquet\Form\BouquetForm'
+    _title: 'Bouquet Form View'
+    bid: ''
+  requirements:
+    _permission: 'add bouquet'
+
+bouquet.bouquet_delete:
+  path: '/bouquet/delete/{bid}'
+  defaults: 
+    _form: '\Drupal\bouquet\Form\BouquetForm'
+    _title: 'Bouquet Form Delete'
+    bid: ''
+  requirements:
+    _permission: 'add bouquet'

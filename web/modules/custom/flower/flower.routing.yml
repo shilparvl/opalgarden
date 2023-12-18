@@ -1,0 +1,8 @@
+flower.flowersrout:
+  path: '/createflowers/{fid}'
+  defaults: 
+    _form: '\Drupal\flower\Form\FlowerForm'
+    _title: 'Flower Form'
+    fid: ''
+  requirements:
+    _permission: 'add flowers'

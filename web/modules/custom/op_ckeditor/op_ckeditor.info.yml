@@ -1,0 +1,9 @@
+name: 'Opal Garden CKeditor'
+type: module
+description: 'Custom CKEditor configuration.'
+core_version_requirement: ^9
+package: OpalGarden
+dependencies:
+  - drupal:ckeditor
+libraries:
+  - op_ckeditor/op_ckeditor

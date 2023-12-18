@@ -1,0 +1,10 @@
+<?php
+/**
+ * Implements hook_page_attachments() for adding page attachments.
+ */
+function op_ckeditor_page_attachments(array &$attachments) {
+  $current_path = \Drupal::service('path.current')->getPath();
+  if (preg_match('/^\/node\/\d+\/edit$|^\/node\/add\//', $current_path)) {
+    $attachments['#attached']['library'][] = 'op_ckeditor/op_ckeditor';
+  }
+}

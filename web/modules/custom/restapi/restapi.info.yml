@@ -1,0 +1,4 @@
+name: restapi
+type: module
+core_version_requirement: ^9
+description: module for restapi

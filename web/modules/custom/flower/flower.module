@@ -1,0 +1,17 @@
+<?php
+use Drupal\views\Views;
+
+
+function flower_views_data_alter(&$data){
+
+  $data['flower']['taxonomy_term_field_data']['relationship'] = [
+    'title' => 'Color Taxonomy field',
+    'label' => 'Color Taxonomy field',
+    'group' => 'Color Taxonomy field',
+    'id' => 'standard',
+    'base' => 'taxonomy_term_field_data',
+    'base field' => 'tid',
+    'field' => 'color',
+
+  ];
+}

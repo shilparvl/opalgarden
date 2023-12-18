@@ -1,0 +1,6 @@
+title: Flower Module
+name: Flower module
+description: To collect different Flowers in the custom module
+type: module
+package: custom
+core_version_requirement: ^8 || ^9

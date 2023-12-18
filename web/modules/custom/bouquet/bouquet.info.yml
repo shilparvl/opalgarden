@@ -1,0 +1,7 @@
+name: Bouquet
+type: module
+description: set of flower bouquet
+core_version_requirement: ^8 || ^9
+package: custom
+dependencies:
+  - drupal:block
