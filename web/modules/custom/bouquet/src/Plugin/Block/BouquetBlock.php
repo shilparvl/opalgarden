@@ -37,7 +37,6 @@ class BouquetBlock extends BlockBase{
     function bouquet_block_view_system_menu_block_alter(array &$build, BlockPluginInterface $block) {
         // Add contextual links for system menu blocks.
         $menus = menu_list_system_menus();
-        dpm($menus);
         \Drupal::messenger()->addMessage('block menus', 'menus');
         $menu_name = $block->getDerivativeId();
         if (isset($menus[$menu_name])) {
